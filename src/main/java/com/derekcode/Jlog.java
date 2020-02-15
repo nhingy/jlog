@@ -14,24 +14,12 @@ public class Jlog {
 		setFileName(fileName);
 	}
 
-	public log(Integer level,  String msg){
+	public log(LogLevel level,  String msg){
 		if (mode == 0){
-			logToConsole(msg);
+			logToConsole(level, msg);
 		} else {
-			logToFile(msg);
+			logToFile(level, msg);
 		}
-	}
-
-	private void logToFile(){
-		try{
-
-		}catch(Exception e){
-
-		}
-	}
-
-	private void logToConsole(){
-
 	}
 
 	public void setMode(int mode){
@@ -45,5 +33,3 @@ public class Jlog {
 	
 
 }
-
-private enum 
